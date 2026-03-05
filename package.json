@@ -29,6 +29,7 @@
     "@babel/plugin-transform-runtime": "^7.23.7",
     "@babel/preset-env": "^7.23.7",
     "@babel/preset-react": "^7.23.3",
+    "@flydotio/dockerfile": "^0.7.10",
     "@playwright/test": "^1.58.2",
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
@@ -55,9 +56,13 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1"
   },
- "jest": {
-  "testEnvironment": "jsdom",
-  "testPathIgnorePatterns": ["e2e-tests"],
-  "setupFilesAfterEnv": ["<rootDir>/test/setupTests.js"]
-}
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": [
+      "e2e-tests"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setupTests.js"
+    ]
+  }
 }
