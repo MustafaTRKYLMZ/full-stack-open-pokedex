@@ -4,6 +4,7 @@ import LoadingSpinner from './LoadingSpinner'
 import { useApi } from './useApi'
 import PokemonAbility from './PokemonAbility'
 import ErrorMessage from './ErrorMessage'
+import PropTypes from 'prop-types'
 
 const formatName = (nameWithDash) => nameWithDash.replace('-', ' ')
 
@@ -26,7 +27,6 @@ const PokemonPage = ({ previous, next }) => {
   const normalAbility = pokemon.abilities.find((ability) => !ability.is_hidden)
   const hiddenAbility = pokemon.abilities.find((ability) => ability.is_hidden === true)
 
-  console.log('hiddenAbility=', hiddenAbility)
   return (
     <>
       <div className="links">
@@ -58,6 +58,14 @@ const PokemonPage = ({ previous, next }) => {
       </div>
     </>
   )
+}
+PokemonPage.propTypes = {
+  previous: PropTypes.shape({
+    name: PropTypes.string.isRequired
+  }),
+  next: PropTypes.shape({
+    name: PropTypes.string.isRequired
+  })
 }
 
 export default PokemonPage
