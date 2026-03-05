@@ -15,6 +15,6 @@ jobs:
       - name: Print Date
         run: date
       - name: Print Directory
-        run: ls -la
+        run: ls -l
 
         
